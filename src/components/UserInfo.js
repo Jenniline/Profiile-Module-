@@ -9,7 +9,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 export class UserInfo extends Component {
     continue = e => {   
         e.preventDefault();
-        //PROCESS YOUR FORM // This is whare you send information to you API for processing
+        //PROCESS YOUR FORM // This is where you send information to you API for processing
         this.props.nextStep();
     };
 

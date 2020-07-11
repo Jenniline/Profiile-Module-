@@ -49,6 +49,8 @@ export class SignIn extends Component {
             this.setState({[input]: e.target.value}); 
         }
 
+ 
+
 //end of the methods now we go to the render
 
     render() {
@@ -84,7 +86,11 @@ export class SignIn extends Component {
                         />
                     )
                 case 3  :
-                    return <Success />
+                    return (<Success 
+                    prevStep = {this.prevStep}     
+                        values={values}
+                    />
+                    )
         }
 
     }
