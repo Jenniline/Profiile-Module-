@@ -12,7 +12,7 @@ export class FormUserDetails extends Component {
     continue = e => {
         e.preventDefault();
         this.props.nextStep();
-    }
+    };
     //back method for back button
     back = e => {
         e.preventDefault();
