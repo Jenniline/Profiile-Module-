@@ -11,16 +11,8 @@ export class SignIn extends Component {
             step:1,
             Username:'',
             idcardnumber:'',
-            Email:'',
-            //Medical Information big subtitle
-            //   COVID'19 Status 
-           Status_Positive:'',
-           Status_Negative:'',
-            //COVID'19 TEST
-          TEST_YES:'',
-          TEST_NO:'',
-          NumOfFamilyMembers:'',
-          HowManyFamilyMembersHaveDoneTest:'',
+            Email:'', 
+          Symptoms:'',
           Present_Location:'',
           Previous_Location:''        
          }
@@ -49,13 +41,15 @@ export class SignIn extends Component {
             this.setState({[input]: e.target.value}); 
         }
 
+            
+
 //end of the methods now we go to the render
 
     render() {
 
         const {step} = this.state;
-        const {Username,idcardnumber,Email,Status_Positive,Status_Negative,TEST_YES,TEST_NO,NumOfFamilyMembers,HowManyFamilyMembersHaveDoneTest,Present_Location,Previous_Location} = this.state;
-        const values = {Username,idcardnumber,Email,Status_Positive,Status_Negative,TEST_YES,TEST_NO,NumOfFamilyMembers,HowManyFamilyMembersHaveDoneTest,Present_Location,Previous_Location};
+        const {Username,idcardnumber,Email,Symptoms,Present_Location,Previous_Location} = this.state;
+        const values = {Username,idcardnumber,Email,Present_Location,Previous_Location};
 
         switch (step) {
             case 1:
