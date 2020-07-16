@@ -98,7 +98,7 @@ export class FormUserDetails extends Component {
                     </div>
 
 
-                    <h4>WHAT IS YOUT COVID'19 STATUS?</h4>
+                    <h4>WHAT IS YOUR COVID'19 STATUS?</h4>
 
                     <div>
                         <label>

@@ -9,7 +9,14 @@ export class Success extends Component {
     back = e => {
         e.preventDefault();
         this.props.prevStep();
-    };
+    }
+
+    signOut = e =>{
+        e.preventDefault();
+
+         localStorage.clear();
+         window.location.href='/'
+    }
 
 
     render() {
@@ -29,7 +36,7 @@ export class Success extends Component {
                         label="Sign Out"
                         primary={true}
                         style={styles.button}
-                        onClick={this.continue} //what does continue do? It calls nextStep
+                        onClick={this.signOut} //what does continue do? It calls nextStep
                     />
 
                     <RaisedButton

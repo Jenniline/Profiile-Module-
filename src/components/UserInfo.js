@@ -9,7 +9,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 export class UserInfo extends Component {
     continue = e => {   
         e.preventDefault();
-        //PROCESS YOUR FORM // This is whare you send information to you API for processing
+        //PROCESS YOUR FORM // This is where you send information to you API for processing
         this.props.nextStep();
     };
 
@@ -47,21 +47,7 @@ export class UserInfo extends Component {
                         secondaryText={ Email }
                     />
 
-                    <ListItem
-                        primaryText="YES I HAVE BEEN TESTED"
-                        secondaryText={TEST_YES}
-                    />
-
-                    <ListItem
-                        primaryText="Number Of Family Members"
-                        secondaryText={ NumOfFamilyMembers }
-                    />
-
-                    <ListItem
-                        primaryText="How Many Family Members Have Done COVID'19 Test"
-                        secondaryText={ HowManyFamilyMembersHaveDoneTest }
-                    />
-
+                  
                     <ListItem
                         primaryText="Present Location"
                         secondaryText={ Present_Location }
