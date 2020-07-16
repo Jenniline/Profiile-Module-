@@ -6,12 +6,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 
 export class Success extends Component {
 
-    back = e => {
-        e.preventDefault();
-        this.props.prevStep();
-    };
-
-
+  
     render() {
         return (
             <MuiThemeProvider>
@@ -32,13 +27,7 @@ export class Success extends Component {
                         onClick={this.continue} //what does continue do? It calls nextStep
                     />
 
-                    <RaisedButton
-                        label="Back"
-                        primary={true}
-                        style={styles.button}
-                        onClick={this.back} //what does back do? It calls prevStep
-                    />
-
+                    
                 </React.Fragment>
             </MuiThemeProvider>
         )

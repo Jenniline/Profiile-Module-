@@ -23,12 +23,12 @@ export class UserInfo extends Component {
 
 
     render() {
-        const {values: {Username,idcardnumber,Email,TEST_YES,NumOfFamilyMembers,HowManyFamilyMembersHaveDoneTest,Present_Location, Previous_Location}} = this.props;
+        const {values: {Username,idcardnumber,Email,TEST_YES,TEST_NO,NumOfFamilyMembers,HowManyFamilyMembersHaveDoneTest,Present_Location, Previous_Location}} = this.props;
 
         return (
             <MuiThemeProvider>
                 <React.Fragment>
-                    <AppBar title="Confirm User Information"/>
+                    <AppBar title="User Information"/>
 
                 <List>
 
@@ -47,20 +47,10 @@ export class UserInfo extends Component {
                         secondaryText={ Email }
                     />
 
-                    <ListItem
-                        primaryText="YES I HAVE BEEN TESTED"
-                        secondaryText={TEST_YES}
-                    />
+                    
 
-                    <ListItem
-                        primaryText="Number Of Family Members"
-                        secondaryText={ NumOfFamilyMembers }
-                    />
 
-                    <ListItem
-                        primaryText="How Many Family Members Have Done COVID'19 Test"
-                        secondaryText={ HowManyFamilyMembersHaveDoneTest }
-                    />
+                   
 
                     <ListItem
                         primaryText="Present Location"
@@ -94,15 +84,10 @@ export class UserInfo extends Component {
                         onClick={this.continue} //what does continue do? It calls nextStep
                     />
 
-                    <RaisedButton
-                        label="Update"
-                        primary={true}
-                        style={styles.button}
-                        onClick={this.update} //what does continue do? It calls nextStep
-                    />
+                    
 
                     <RaisedButton
-                        label="Back"
+                        label="UPDATE"
                         primary={true}
                         style={styles.button}
                         onClick={this.back} //what does continue do? It calls nextStep
