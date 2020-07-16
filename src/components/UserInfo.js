@@ -9,7 +9,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 export class UserInfo extends Component {
     continue = e => {   
         e.preventDefault();
-        //PROCESS YOUR FORM // This is where you send information to you API for processing
+        //PROCESS YOUR FORM // This is whare you send information to you API for processing
         this.props.nextStep();
     };
 
@@ -23,12 +23,12 @@ export class UserInfo extends Component {
 
 
     render() {
-        const {values: {Username,idcardnumber,Email,TEST_YES,NumOfFamilyMembers,HowManyFamilyMembersHaveDoneTest,Present_Location, Previous_Location}} = this.props;
+        const {values: {Username,idcardnumber,Email,Present_Location, Previous_Location}} = this.props;
 
         return (
             <MuiThemeProvider>
                 <React.Fragment>
-                    <AppBar title="Confirm User Information"/>
+                    <AppBar title="User Information"/>
 
                 <List>
 
@@ -47,7 +47,6 @@ export class UserInfo extends Component {
                         secondaryText={ Email }
                     />
 
-                  
                     <ListItem
                         primaryText="Present Location"
                         secondaryText={ Present_Location }
@@ -57,14 +56,6 @@ export class UserInfo extends Component {
                         primaryText=" Previous Location"
                         secondaryText={ Previous_Location}
                     />
-
-                
-                    
-
-
-
-
-
 
 
 
@@ -80,15 +71,10 @@ export class UserInfo extends Component {
                         onClick={this.continue} //what does continue do? It calls nextStep
                     />
 
-                    <RaisedButton
-                        label="Update"
-                        primary={true}
-                        style={styles.button}
-                        onClick={this.update} //what does continue do? It calls nextStep
-                    />
+
 
                     <RaisedButton
-                        label="Back"
+                        label="UPDATE"
                         primary={true}
                         style={styles.button}
                         onClick={this.back} //what does continue do? It calls nextStep

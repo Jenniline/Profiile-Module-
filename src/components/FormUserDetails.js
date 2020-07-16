@@ -27,15 +27,16 @@ export class FormUserDetails extends Component {
 
 
 
+
     render() {
         const {values,handleChange } = this.props;
 
         return (
 
-        
+
             <MuiThemeProvider>
                 <React.Fragment>
-                    <AppBar title="Sign In"/>
+                    <AppBar title="Insert Information"/>
 
                 <form onSubmit={this.formSubmit} >    
                     <TextField
@@ -66,79 +67,23 @@ export class FormUserDetails extends Component {
 
                     <br/>
 
-                    <h2>Medical Information</h2>
+                    <h2>Symptoms</h2>
 
-
-                    <h4> HAVE YOU BEEN TESTED FOR COVID'19?</h4>
-
-                    <div>
-                        <label>
-                           <input 
-                                type="radio"
-                                value="TEST_YES:"
-                                onChange={handleChange('TEST_YES:')}                     
-                                defaultValue={values.Status_Positive }
-                            />
-                             YES
-                         </label>   
-                    </div>
-
-                    <br />
-
-                    <div>
-                        <label>
-                           <input 
-                                type="radio"
-                                value="TEST_NO:"
-                                onChange={handleChange('TEST_NO:')}
-                                defaultValue={values.TEST_NO}
-                            />
-                             NO
-                         </label>   
-                    </div>
-
-
-                    <h4>WHAT IS YOUR COVID'19 STATUS?</h4>
-
-                    <div>
-                        <label>
-                           <input 
-                                type="radio"
-                                value="Status_Positive"
-                                onChange={handleChange('Status_Positive')}
-                                defaultValue={values.Status_Positive }
-                            />
-                             POSITIVE
-                         </label>   
-                    </div>
-
-                    <br />
-                    <div>
-                        <label>
-                           <input 
-                                type="radio"
-                                value="Status_Negative"
-                                onChange={handleChange('Status_Negative')}
-                                defaultValue={values.Status_Positive }
-                            />
-                             NEGATIVE
-                         </label>   
-                    </div>
 
                     <TextField
-                        hintText="Enter Number of Family Members"
-                        floatingLabelText="Number of Family members"
-                        onChange={handleChange('NumOfFamilyMembers')}
-                        defaultValue={values.NumOfFamilyMembers}       
+                        hintText="Symptoms"
+                        floatingLabelText=" Symptoms"
+                        onChange={handleChange('Symptoms')}
+                        defaultValue={values.Symptoms}       
                     />
 
                     <br/>
 
                     <TextField
-                          //  hintText="Members That have done COVID'19 Test"
-                            floatingLabelText="Members that have done test"
-                            onChange={handleChange('HowManyFamilyMembersHaveDoneTest')}
-                            defaultValue={values.HowManyFamilyMembersHaveDoneTest}    
+                             hintText="Symptoms"
+                            floatingLabelText="Symptoms"
+                            onChange={handleChange('Symptoms')}
+                            defaultValue={values.Symptoms}    
                     />
 
                     <br/>
@@ -146,8 +91,8 @@ export class FormUserDetails extends Component {
                     <h4>LOCATION</h4>
 
                     <TextField
-                        hintText="Enter Location"
-                        floatingLabelText="Enter Location"
+                        hintText="Present Location"
+                        floatingLabelText="Present Location"
                         onChange={handleChange('Present_Location')}
                         defaultValue={values.Present_Location }       
                     />
@@ -155,25 +100,11 @@ export class FormUserDetails extends Component {
                     <br/>
 
                     <TextField
-                        hintText="Enter Location"
-                        floatingLabelText="Enter Location"
+                        hintText="Previous Location"
+                        floatingLabelText="Previous Location"
                         onChange={handleChange('Previous_Location')}
                         defaultValue={values.Previous_Location }       
                     />
-                    
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                         <br/>
 
@@ -199,4 +130,3 @@ const styles = {
 }
 
 export default FormUserDetails;
-

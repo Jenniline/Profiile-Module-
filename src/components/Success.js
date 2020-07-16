@@ -39,12 +39,7 @@ export class Success extends Component {
                         onClick={this.signOut} //what does continue do? It calls nextStep
                     />
 
-                    <RaisedButton
-                        label="Back"
-                        primary={true}
-                        style={styles.button}
-                        onClick={this.back} //what does back do? It calls prevStep
-                    />
+                   
 
                 </React.Fragment>
             </MuiThemeProvider>
