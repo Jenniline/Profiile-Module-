@@ -23,7 +23,7 @@ export class UserInfo extends Component {
 
 
     render() {
-        const {values: {Username,idcardnumber,Email,Present_Location, Previous_Location}} = this.props;
+        const {values: {Username,idcardnumber,Email,Symptoms,Present_Location, Previous_Location}} = this.props;
 
         return (
             <MuiThemeProvider>
@@ -45,6 +45,16 @@ export class UserInfo extends Component {
                     <ListItem
                         primaryText="Email"
                         secondaryText={ Email }
+                    />
+
+                    <ListItem
+                        primaryText="Symptoms"
+                        secondaryText={ Symptoms }
+                    />
+
+                    <ListItem
+                        primaryText="Symptoms"
+                        secondaryText={ Symptoms }
                     />
 
                     <ListItem
